@@ -1,13 +1,35 @@
 ---
-title: "Jouer avec les homophones dès la maternelle : 6 idées toutes simples"
+title: ABÉCÉDAIRE DE LA MER
 date: 2026-05-28
-categories: ["Langage & vocabulaire"]
-tags: [langage, homophones, maternelle]
-excerpt: "Une baleine ou une belle laine ? Découvrez 6 jeux oraux tout simples pour faire rire les 3 à 7 ans avec les homophones et affiner leur écoute."
-image: /assets/img/blog/jouer-avec-les-homophones-en-maternelle.svg
-pdf: /assets/pdf/fiche-homophones.pdf
+categories:
+  - Langage & vocabulaire
+tags:
+  - langage
+  - abécédaire
+  - mer
+excerpt: >-
+  Abécédaire de la mer, projet annuel clé en main.
+
+
+  Chaque page correspond à une lettre de l'alphabet, un mot de vocabulaire en
+  lien avec la mer et l'océan, ainsi qu'à une technique d'art différente :
+  collage, assemblage, peinture, coloriage, dessin, graphisme...
+
+
+  Le fichier comprend : 
+
+
+  - 26 pages d'explication pas à pas pour chaque page de l'abécédaire
+
+
+  - 26 pages d'étiquettes dans les 3 graphies
+
+
+  - 26 pages et + de matériel imprimable pour réaliser toutes les activités.
+image: /assets/img/2.jpg
 pdf_title: "Fiche à imprimer : la chasse aux homophones"
-pdf_description: "Une fiche d’activité prête à imprimer pour jouer avec les sons et les mots à la maison ou en classe."
+pdf_description: Une fiche d’activité prête à imprimer pour jouer avec les sons
+  et les mots à la maison ou en classe.
 ---
 Avez-vous déjà entendu votre enfant éclater de rire en réalisant qu’une « baleine » peut aussi être une « belle laine » ? Ce petit déclic, c’est de la magie de la langue à l’état pur. Les homophones — ces mots qui se prononcent pareil mais ne veulent pas dire la même chose — sont un terrain de jeu formidable dès la maternelle. Pas besoin de savoir lire ni écrire : il suffit d’ouvrir grand les oreilles et de s’amuser ensemble. Voici comment, et pourquoi cela fait tellement de bien aux petits.
 
@@ -55,14 +77,16 @@ On prononce un mot en le découpant lentement : « au… truche ». L’enfant �
 
 On invente ensemble une phrase à partir d’un homophone : « La baleine tricote une belle laine sur la plage. » Plus c’est absurde, mieux c’est. L’enfant manipule le langage et prend confiance pour parler.
 
+
 | Jeu | Compétence travaillée | Où jouer ? |
-| --- | --- | --- |
+| ------------------------ | -------------------------- | ---------------------- |
 | Devinettes rigolotes | Compréhension, vocabulaire | À table, en voiture |
 | Chasse aux sons | Écoute fine des sons | Partout |
 | Dessiner ce qu’on entend | Imaginaire, sens des mots | À la maison, en classe |
 | Mot mystère coupé | Découpage en syllabes | Le soir, au calme |
 | Rimes en chaîne | Repérage des sons proches | En groupe |
 | Phrase la plus folle | Expression orale | En famille |
+
 
 ## Quelques repères pour bien accompagner
 
