@@ -31,8 +31,8 @@ forms:
 # baseurl : laissez "" pour une page utilisateur ou un domaine perso.
 #           Mettez "/nom-du-depot" UNIQUEMENT pour un "project site"
 #           du type https://VOTRE-PSEUDO.github.io/nom-du-depot
-url: ""
-baseurl: ""
+url: "https://savgat.github.io"
+baseurl: "/site"
 
 # --- Réseaux sociaux (laisser vide pour masquer le lien) ----
 social:
