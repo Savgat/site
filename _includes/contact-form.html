@@ -1,23 +1,8 @@
----
-layout: page
-title: "Contact"
-subtitle: "Une question, une dédicace, un projet pour l'école ? Écrivez à Savannah."
-permalink: /contact/
-description: "Contactez Savannah Gatineau, autrice jeunesse et professeure des écoles : dédicaces, rencontres en classe, commandes groupées, presse."
----
-
-<p>N'hésitez pas à écrire à Savannah pour&nbsp;:</p>
-<ul>
-  <li>📚 une <strong>commande groupée</strong> pour une école, une médiathèque ou une association&nbsp;;</li>
-  <li>✍️ une <strong>dédicace</strong> ou une <strong>rencontre</strong> en classe&nbsp;;</li>
-  <li>🗞️ une demande <strong>presse</strong> ou un partenariat&nbsp;;</li>
-  <li>💬 simplement partager un retour sur un livre ou un article.</li>
-</ul>
-
 {%- comment -%}
-  Le formulaire ne s'affiche QUE si un identifiant Formspree est renseigné dans
-  _config.yml (forms.formspree_id). Sinon, on met en avant le contact par e-mail,
-  toujours fonctionnel. Voir le README, section « formulaire de contact ».
+  Bloc « formulaire + e-mail + réseaux » de la page Contact.
+  Séparé du texte pour que la page reste modifiable en WYSIWYG sans risque.
+  Le formulaire ne s'affiche que si forms.formspree_id est renseigné dans
+  _config.yml ; sinon on met en avant le contact par e-mail (toujours fonctionnel).
 {%- endcomment -%}
 {%- if site.forms.formspree_id and site.forms.formspree_id != "" -%}
 <form class="contact-form" action="https://formspree.io/f/{{ site.forms.formspree_id }}" method="POST">

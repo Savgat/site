@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">{{ page.title }}</h1>
+    {%- if page.subtitle -%}<p class="page-hero-subtitle">{{ page.subtitle }}</p>{%- endif -%}
+  </div>
+</div>
+
+<div class="container section">
+  <article class="prose">
+    {{ content }}
+    {% include contact-form.html %}
+  </article>
+</div>

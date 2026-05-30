@@ -305,6 +305,10 @@ a.chip:hover { background: var(--c-primary); color: #fff; }
 .prose th, .prose td { border: 1px solid var(--c-border); padding: .6rem .8rem; text-align: left; }
 .prose th { background: var(--c-surface-2); font-family: var(--font-head); }
 .lead { font-size: 1.2rem; color: var(--c-muted); }
+.page-portrait { text-align: center; margin: 0 0 2rem; }
+.page-portrait img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow); margin-inline: auto; }
+.page-portrait figcaption { margin-top: .6rem; }
+.page-cta { margin-top: 2rem; }
 
 /* ---------- Encadré PDF ---------------------------------------- */
 .pdf-box {

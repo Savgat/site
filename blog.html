@@ -7,8 +7,8 @@ description: "Articles, activités et ressources gratuites de Savannah Gatineau 
 
 <div class="page-hero">
   <div class="container">
-    <h1 class="page-hero-title">Le blog</h1>
-    <p class="page-hero-subtitle">Des idées concrètes et des ressources à imprimer pour les parents et les enseignants de maternelle. Filtrez par thème ci-dessous.</p>
+    <h1 class="page-hero-title">{{ site.data.ui.blog.hero_title }}</h1>
+    <p class="page-hero-subtitle">{{ site.data.ui.blog.hero_subtitle }}</p>
   </div>
 </div>
 
@@ -29,7 +29,7 @@ description: "Articles, activités et ressources gratuites de Savannah Gatineau 
       {%- endfor -%}
     </div>
     {%- else -%}
-    <p class="empty-state">Les premiers articles arrivent très bientôt ! Revenez vite. 🌱</p>
+    <p class="empty-state">{{ site.data.ui.blog.empty }}</p>
     {%- endif -%}
 
     <div style="margin-top:2.5rem;">

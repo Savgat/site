@@ -28,19 +28,21 @@ connaissance technique requise. Tout est déjà configuré dans le fichier `.pag
    (vous pouvez limiter l'accès à ce seul dépôt).
 3. Le site apparaît dans la liste : cliquez dessus. C'est prêt&nbsp;! ✅
 
-**Au quotidien** :
+**Au quotidien**, tout se modifie depuis l'interface, **sans toucher au code** :
 
 - **Articles du blog** → écrire un nouvel article, choisir la catégorie, ajouter
-  une image de couverture et un PDF à télécharger, rédiger le texte, puis **Save**.
-- **Les livres** → modifier titres, prix, descriptions, couvertures, liens d'achat.
-- **Pages « À propos » / « Mentions légales »** → modifier le texte.
+  une image de couverture et un PDF à télécharger, rédiger le texte (éditeur
+  visuel), puis **Save**.
+- **Les livres** → titres, prix, descriptions, couvertures, liens d'achat.
+- **Pages « À propos », « Contact », « Mentions légales »** → éditeur visuel
+  (gras, listes, liens…). Les éléments techniques (formulaire de contact, photo,
+  clauses cookies) sont gérés automatiquement par le site : rien à toucher.
+- **Textes des pages (accueil, livres, blog…)** → tous les titres, intros et
+  boutons des pages « vitrines » sont modifiables ici.
 
 À chaque enregistrement, le site se met à jour tout seul en une minute environ.
 Astuce : on peut inviter Savannah comme **collaboratrice** du dépôt (Settings →
 Collaborators) pour qu'elle se connecte avec son propre compte GitHub.
-
-> Pour les pages, laissez tels quels les petits bouts entre `{{ }}` ou `{% %}` :
-> ce sont des éléments techniques (liens, conditions) gérés par le site.
 
 ---
 

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">{{ page.title }}</h1>
+    {%- if page.subtitle -%}<p class="page-hero-subtitle">{{ page.subtitle }}</p>{%- endif -%}
+  </div>
+</div>
+
+<div class="container section">
+  <article class="prose">
+    {{ content }}
+
+    <h2>Nous contacter</h2>
+    <p>Pour toute question relative à ces mentions ou à vos données personnelles&nbsp;:
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      (ou via la <a href="{{ '/contact/' | relative_url }}">page Contact</a>).</p>
+
+    <h2>Cookies et publicité</h2>
+    {% include legal-cookies.html %}
+  </article>
+</div>

@@ -3,17 +3,18 @@ layout: default
 title: "Accueil"
 description: "Savannah Gatineau, professeure des écoles et autrice jeunesse. Albums pédagogiques pour les 3-7 ans, ressources gratuites pour la maternelle et idées d'activités pour parents et enseignants."
 ---
+{%- assign t = site.data.ui.home -%}
 
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="hero-eyebrow">Autrice jeunesse &amp; professeure des écoles</p>
-      <h1>Des albums qui donnent le goût des mots et de la découverte</h1>
-      <p class="hero-lead">Savannah Gatineau écrit des albums pédagogiques joyeux pour les enfants de 3 à 7 ans, et partage ici des ressources gratuites pour les parents et les enseignants de maternelle.</p>
+      <p class="hero-eyebrow">{{ t.hero_eyebrow }}</p>
+      <h1>{{ t.hero_title }}</h1>
+      <p class="hero-lead">{{ t.hero_lead }}</p>
       <div class="hero-actions">
-        <a class="btn btn-accent" href="{{ '/livres/' | relative_url }}">Découvrir les livres</a>
-        <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Lire le blog</a>
+        <a class="btn btn-accent" href="{{ '/livres/' | relative_url }}">{{ t.hero_button_books }}</a>
+        <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">{{ t.hero_button_blog }}</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -36,9 +37,9 @@ description: "Savannah Gatineau, professeure des écoles et autrice jeunesse. Al
 <section class="section section-alt">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">À lire et à offrir</p>
-      <h2>Les livres de Savannah</h2>
-      <p>Des albums tout en couleur, à la fois tendres et malins, conçus comme de vrais outils pour apprendre en s'amusant.</p>
+      <p class="eyebrow">{{ t.books_eyebrow }}</p>
+      <h2>{{ t.books_title }}</h2>
+      <p>{{ t.books_intro }}</p>
     </div>
     <div class="book-grid">
       {%- for book in site.data.books -%}
@@ -57,9 +58,9 @@ description: "Savannah Gatineau, professeure des écoles et autrice jeunesse. Al
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">Le blog</p>
-      <h2>Idées, activités &amp; ressources</h2>
-      <p>Des articles concrets pour éveiller les tout-petits au langage, à la nature et au plaisir de lire.</p>
+      <p class="eyebrow">{{ t.blog_eyebrow }}</p>
+      <h2>{{ t.blog_title }}</h2>
+      <p>{{ t.blog_intro }}</p>
     </div>
     {%- if site.posts.size > 0 -%}
     <div class="article-grid">
@@ -68,10 +69,10 @@ description: "Savannah Gatineau, professeure des écoles et autrice jeunesse. Al
       {%- endfor -%}
     </div>
     <p style="text-align:center; margin-top:2rem;">
-      <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Voir tous les articles</a>
+      <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">{{ t.blog_button }}</a>
     </p>
     {%- else -%}
-    <p class="empty-state">Les premiers articles arrivent très bientôt !</p>
+    <p class="empty-state">{{ site.data.ui.blog.empty }}</p>
     {%- endif -%}
   </div>
 </section>
@@ -80,8 +81,8 @@ description: "Savannah Gatineau, professeure des écoles et autrice jeunesse. Al
 <section class="section section-alt">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">Explorer</p>
-      <h2>Par thème</h2>
+      <p class="eyebrow">{{ t.categories_eyebrow }}</p>
+      <h2>{{ t.categories_title }}</h2>
     </div>
     <div class="book-grid">
       {%- for cat in site.data.categories -%}
@@ -102,9 +103,9 @@ description: "Savannah Gatineau, professeure des écoles et autrice jeunesse. Al
 <section class="section">
   <div class="container">
     <div class="cta">
-      <h2>Enseignant·e ou parent ?</h2>
-      <p>Découvrez les albums pédagogiques de Savannah pour travailler le langage, le vocabulaire et l'alimentation en maternelle — et n'hésitez pas à la contacter pour une dédicace ou une rencontre.</p>
-      <a class="btn btn-accent" href="{{ '/contact/' | relative_url }}">Prendre contact</a>
+      <h2>{{ t.cta_title }}</h2>
+      <p>{{ t.cta_text }}</p>
+      <a class="btn btn-accent" href="{{ '/contact/' | relative_url }}">{{ t.cta_button }}</a>
     </div>
   </div>
 </section>

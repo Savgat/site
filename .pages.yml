@@ -151,9 +151,34 @@ content:
       - name: subtitle
         label: "Sous-titre"
         type: string
+      - name: image
+        label: "Photo de Savannah"
+        type: image
+        options:
+          media: images
+      - name: image_caption
+        label: "Légende sous la photo"
+        type: string
       - name: body
-        label: "Contenu (Markdown — laissez les éléments entre {{ }} tels quels)"
-        type: text
+        label: "Texte de la page"
+        type: rich-text
+
+  # ---------- Page « Contact » ----------
+  - name: page_contact
+    label: "Page « Contact »"
+    type: file
+    path: contact.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: "Titre"
+        type: string
+      - name: subtitle
+        label: "Sous-titre"
+        type: string
+      - name: body
+        label: "Texte d'introduction (le formulaire est ajouté automatiquement)"
+        type: rich-text
 
   # ---------- Page « Mentions légales » ----------
   - name: page_mentions
@@ -169,8 +194,69 @@ content:
         label: "Sous-titre"
         type: string
       - name: body
-        label: "Contenu (Markdown — laissez les éléments entre {% %} tels quels)"
-        type: text
+        label: "Texte (les rubriques « Nous contacter » et « Cookies » sont ajoutées automatiquement)"
+        type: rich-text
+
+  # ---------- Textes des pages « vitrines » ----------
+  - name: ui
+    label: "Textes des pages (accueil, livres, blog…)"
+    type: file
+    path: _data/ui.yml
+    format: yaml
+    fields:
+      - name: home
+        label: "Accueil"
+        type: object
+        fields:
+          - { name: hero_eyebrow, label: "Surtitre", type: string }
+          - { name: hero_title, label: "Titre principal", type: string }
+          - { name: hero_lead, label: "Phrase d'accroche", type: text }
+          - { name: hero_button_books, label: "Bouton « livres »", type: string }
+          - { name: hero_button_blog, label: "Bouton « blog »", type: string }
+          - { name: books_eyebrow, label: "Section livres — surtitre", type: string }
+          - { name: books_title, label: "Section livres — titre", type: string }
+          - { name: books_intro, label: "Section livres — intro", type: text }
+          - { name: blog_eyebrow, label: "Section blog — surtitre", type: string }
+          - { name: blog_title, label: "Section blog — titre", type: string }
+          - { name: blog_intro, label: "Section blog — intro", type: text }
+          - { name: blog_button, label: "Section blog — bouton", type: string }
+          - { name: categories_eyebrow, label: "Section thèmes — surtitre", type: string }
+          - { name: categories_title, label: "Section thèmes — titre", type: string }
+          - { name: cta_title, label: "Appel à l'action — titre", type: string }
+          - { name: cta_text, label: "Appel à l'action — texte", type: text }
+          - { name: cta_button, label: "Appel à l'action — bouton", type: string }
+      - name: livres
+        label: "Page Livres"
+        type: object
+        fields:
+          - { name: hero_title, label: "Titre", type: string }
+          - { name: hero_subtitle, label: "Sous-titre", type: text }
+          - { name: cta_title, label: "Encart — titre", type: string }
+          - { name: cta_text, label: "Encart — texte", type: text }
+          - { name: cta_button, label: "Encart — bouton", type: string }
+      - name: blog
+        label: "Page Blog"
+        type: object
+        fields:
+          - { name: hero_title, label: "Titre", type: string }
+          - { name: hero_subtitle, label: "Sous-titre", type: text }
+          - { name: empty, label: "Message si aucun article", type: text }
+      - name: categories
+        label: "Page Catégories"
+        type: object
+        fields:
+          - { name: hero_title, label: "Titre", type: string }
+          - { name: hero_subtitle, label: "Sous-titre", type: text }
+      - name: notfound
+        label: "Page 404 (introuvable)"
+        type: object
+        fields:
+          - { name: emoji, label: "Émoji", type: string }
+          - { name: title, label: "Titre", type: string }
+          - { name: text, label: "Texte", type: text }
+          - { name: button_home, label: "Bouton accueil", type: string }
+          - { name: button_blog, label: "Bouton blog", type: string }
+          - { name: button_books, label: "Bouton livres", type: string }
 
 # Conserve les champs techniques (layout, permalink…) non listés ci-dessus.
 settings:

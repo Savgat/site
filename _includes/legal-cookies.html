@@ -1,0 +1,22 @@
+{%- comment -%} Paragraphe « cookies & publicité » — dépend de l'activation d'AdSense.
+  Sorti du texte modifiable pour rester correct automatiquement. {%- endcomment -%}
+{%- if site.adsense.enabled -%}
+<p>Ce site affiche des annonces via <strong>Google AdSense</strong>. Aucun cookie
+publicitaire n'est déposé tant que vous n'avez pas <strong>donné votre accord</strong>
+via la bannière de consentement affichée lors de votre première visite. Vous pouvez
+refuser sans conséquence sur l'accès au contenu. Si vous acceptez, Google et ses
+partenaires peuvent déposer des cookies pour proposer des publicités adaptées. Vous
+pouvez à tout moment gérer vos préférences depuis la page
+<a href="https://adssettings.google.com" rel="noopener" target="_blank">Paramètres des annonces Google</a>
+et en savoir plus via les
+<a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">règles de confidentialité de Google</a>.</p>
+<blockquote>À noter pour l'éditrice : pour diffuser des publicités <strong>personnalisées</strong>
+dans l'Espace économique européen, Google exige en plus l'activation d'un message de
+consentement certifié (CMP), gratuit, dans le tableau de bord AdSense
+(rubrique <em>Confidentialité et messages</em>).</blockquote>
+{%- else -%}
+<p>Ce site n'utilise actuellement <strong>aucun cookie de suivi</strong>. Si des
+annonces publicitaires (Google AdSense) sont activées à l'avenir, une bannière de
+consentement s'affichera et aucun cookie publicitaire ne sera déposé sans votre
+accord préalable.</p>
+{%- endif -%}

@@ -10,6 +10,17 @@ layout: default
 
 <div class="container section">
   <article class="prose">
+    {%- if page.image -%}
+    <figure class="page-portrait">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" width="220" height="220">
+      {%- if page.image_caption -%}<figcaption class="form-note">{{ page.image_caption }}</figcaption>{%- endif -%}
+    </figure>
+    {%- endif -%}
+
     {{ content }}
+
+    {%- if page.cta_label and page.cta_url -%}
+    <p class="page-cta"><a class="btn btn-accent" href="{{ page.cta_url | relative_url }}">{{ page.cta_label }}</a></p>
+    {%- endif -%}
   </article>
 </div>

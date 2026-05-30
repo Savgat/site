@@ -1,0 +1,46 @@
+# Textes modifiables des pages "vitrines" (accueil, livres, blog, catégories, 404).
+# Modifiable depuis Pages CMS → « Textes des pages ».
+# Les listes d'articles et de livres, elles, restent automatiques.
+
+home:
+  hero_eyebrow: "Autrice jeunesse & professeure des écoles"
+  hero_title: "Des albums qui donnent le goût des mots et de la découverte"
+  hero_lead: "Savannah Gatineau écrit des albums pédagogiques joyeux pour les enfants de 3 à 7 ans, et partage ici des ressources gratuites pour les parents et les enseignants de maternelle."
+  hero_button_books: "Découvrir les livres"
+  hero_button_blog: "Lire le blog"
+  books_eyebrow: "À lire et à offrir"
+  books_title: "Les livres de Savannah"
+  books_intro: "Des albums tout en couleur, à la fois tendres et malins, conçus comme de vrais outils pour apprendre en s'amusant."
+  blog_eyebrow: "Le blog"
+  blog_title: "Idées, activités & ressources"
+  blog_intro: "Des articles concrets pour éveiller les tout-petits au langage, à la nature et au plaisir de lire."
+  blog_button: "Voir tous les articles"
+  categories_eyebrow: "Explorer"
+  categories_title: "Par thème"
+  cta_title: "Enseignant·e ou parent ?"
+  cta_text: "Découvrez les albums pédagogiques de Savannah pour travailler le langage, le vocabulaire et l'alimentation en maternelle — et n'hésitez pas à la contacter pour une dédicace ou une rencontre."
+  cta_button: "Prendre contact"
+
+livres:
+  hero_title: "Les livres"
+  hero_subtitle: "Des albums cartonnés tout en couleur, pensés comme des outils pour apprendre en s'amusant — à la maison comme en classe."
+  cta_title: "Un projet pour la classe ?"
+  cta_text: "Savannah propose des guides d'exploitation pédagogique et peut intervenir auprès des écoles. Écrivez-lui pour en savoir plus."
+  cta_button: "Contacter Savannah"
+
+blog:
+  hero_title: "Le blog"
+  hero_subtitle: "Des idées concrètes et des ressources à imprimer pour les parents et les enseignants de maternelle. Filtrez par thème ci-dessous."
+  empty: "Les premiers articles arrivent très bientôt ! Revenez vite. 🌱"
+
+categories:
+  hero_title: "Catégories"
+  hero_subtitle: "Tous les articles rangés par thème pour trouver rapidement ce que vous cherchez."
+
+notfound:
+  emoji: "🧐"
+  title: "Oups, cette page a filé !"
+  text: "La page que vous cherchez n'existe pas (ou plus). Pas de panique, voici de quoi rebondir :"
+  button_home: "Retour à l'accueil"
+  button_blog: "Voir le blog"
+  button_books: "Les livres"

@@ -7,8 +7,8 @@ description: "Découvrez les albums jeunesse de Savannah Gatineau : « Articule 
 
 <div class="page-hero">
   <div class="container">
-    <h1 class="page-hero-title">Les livres</h1>
-    <p class="page-hero-subtitle">Des albums cartonnés tout en couleur, pensés comme des outils pour apprendre en s'amusant — à la maison comme en classe.</p>
+    <h1 class="page-hero-title">{{ site.data.ui.livres.hero_title }}</h1>
+    <p class="page-hero-subtitle">{{ site.data.ui.livres.hero_subtitle }}</p>
   </div>
 </div>
 
@@ -59,9 +59,9 @@ description: "Découvrez les albums jeunesse de Savannah Gatineau : « Articule 
     {% include adsense.html slot="0000000004" %}
 
     <div class="cta" style="margin-top:2rem;">
-      <h2>Un projet pour la classe&nbsp;?</h2>
-      <p>Savannah propose des guides d'exploitation pédagogique et peut intervenir auprès des écoles. Écrivez-lui pour en savoir plus.</p>
-      <a class="btn btn-accent" href="{{ '/contact/' | relative_url }}">Contacter Savannah</a>
+      <h2>{{ site.data.ui.livres.cta_title }}</h2>
+      <p>{{ site.data.ui.livres.cta_text }}</p>
+      <a class="btn btn-accent" href="{{ '/contact/' | relative_url }}">{{ site.data.ui.livres.cta_button }}</a>
     </div>
   </div>
 </div>
