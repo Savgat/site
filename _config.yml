@@ -91,3 +91,6 @@ exclude:
   - vendor
   - .gitignore
   - .github
+  - .pages.yml
+  - deploy_key
+  - deploy_key.pub

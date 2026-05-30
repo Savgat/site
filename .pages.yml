@@ -1,0 +1,178 @@
+# =============================================================
+#  Configuration de Pages CMS  —  https://pagescms.org
+#  Permet à Savannah d'écrire et de modifier les articles, les
+#  livres et quelques pages depuis une interface simple, sans
+#  toucher au code. Tout est enregistré dans ce dépôt GitHub,
+#  ce qui reconstruit le site automatiquement.
+#  (Ce fichier commence par un point : Jekyll l'ignore au build.)
+# =============================================================
+
+# --- Dossiers où sont rangés les médias téléversés -----------
+media:
+  - name: images
+    label: "Images"
+    input: assets/img
+    output: /assets/img
+    extensions: [jpg, jpeg, png, gif, svg, webp]
+  - name: documents
+    label: "Documents (PDF)"
+    input: assets/pdf
+    output: /assets/pdf
+    extensions: [pdf]
+
+# --- Contenus modifiables ------------------------------------
+content:
+  # ---------- Les articles du blog ----------
+  - name: posts
+    label: "Articles du blog"
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date, categories]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: "Titre de l'article"
+        type: string
+        required: true
+      - name: date
+        label: "Date de publication"
+        type: date
+        required: true
+        options:
+          format: "yyyy-MM-dd"
+      - name: categories
+        label: "Catégorie"
+        type: select
+        required: true
+        options:
+          multiple: true
+          values:
+            - "Activités maternelle"
+            - "Langage & vocabulaire"
+            - "Alimentation & nature"
+            - "Comptines & lecture"
+            - "Coulisses d'autrice"
+      - name: tags
+        label: "Mots-clés (facultatif)"
+        type: string
+        list: true
+      - name: excerpt
+        label: "Résumé court (cartes & Google)"
+        type: text
+      - name: image
+        label: "Image de couverture (facultatif)"
+        type: image
+        options:
+          media: images
+      - name: pdf
+        label: "PDF à télécharger (facultatif)"
+        type: file
+        options:
+          media: documents
+      - name: pdf_title
+        label: "Titre du PDF"
+        type: string
+      - name: pdf_description
+        label: "Description du PDF"
+        type: text
+      - name: body
+        label: "Contenu de l'article"
+        type: rich-text
+
+  # ---------- Les livres ----------
+  - name: books
+    label: "Les livres"
+    type: file
+    path: _data/books.yml
+    format: yaml
+    list: true
+    fields:
+      - name: id
+        label: "Identifiant (sans espace ni accent, ex. articule)"
+        type: string
+        required: true
+      - name: title
+        label: "Titre"
+        type: string
+        required: true
+      - name: subtitle
+        label: "Sous-titre"
+        type: string
+      - name: age
+        label: "Âge conseillé"
+        type: string
+      - name: format
+        label: "Format (pages, dimensions…)"
+        type: string
+      - name: price_print
+        label: "Prix version papier"
+        type: string
+      - name: price_ebook
+        label: "Prix version PDF (laisser vide si aucune)"
+        type: string
+      - name: cover
+        label: "Couverture"
+        type: image
+        options:
+          media: images
+      - name: buy_url
+        label: "Lien d'achat (TheBookEdition)"
+        type: string
+      - name: theme
+        label: "Thème"
+        type: string
+      - name: featured
+        label: "Mettre en avant sur le site"
+        type: boolean
+      - name: excerpt
+        label: "Phrase d'accroche"
+        type: text
+      - name: description
+        label: "Description"
+        type: text
+
+  # ---------- Page « À propos » ----------
+  - name: page_apropos
+    label: "Page « À propos »"
+    type: file
+    path: a-propos.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: "Titre"
+        type: string
+      - name: subtitle
+        label: "Sous-titre"
+        type: string
+      - name: body
+        label: "Contenu (Markdown — laissez les éléments entre {{ }} tels quels)"
+        type: text
+
+  # ---------- Page « Mentions légales » ----------
+  - name: page_mentions
+    label: "Page « Mentions légales »"
+    type: file
+    path: mentions-legales.md
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: "Titre"
+        type: string
+      - name: subtitle
+        label: "Sous-titre"
+        type: string
+      - name: body
+        label: "Contenu (Markdown — laissez les éléments entre {% %} tels quels)"
+        type: text
+
+# Conserve les champs techniques (layout, permalink…) non listés ci-dessus.
+settings:
+  content:
+    merge: true

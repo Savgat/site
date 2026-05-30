@@ -9,6 +9,38 @@ jeunesse. Construit avec **Jekyll** et hébergé gratuitement sur **GitHub Pages
 - 📢 Emplacements Google AdSense prêts à activer
 - 📨 Page contact (formulaire + e-mail + réseaux sociaux)
 - 🇫🇷 Entièrement en français, optimisé pour le référencement (SEO)
+- ✨ Interface d'édition **sans code** via Pages CMS (voir ci-dessous)
+
+---
+
+## ✨ Le plus simple pour Savannah : écrire avec Pages CMS
+
+[Pages CMS](https://pagescms.org) offre une interface conviviale pour **écrire et
+modifier les articles, les livres et les pages** — comme un traitement de texte,
+avec choix de la catégorie dans une liste et envoi d'images/PDF en un clic. Aucune
+connaissance technique requise. Tout est déjà configuré dans le fichier `.pages.yml`.
+
+**Mise en route (une seule fois)** :
+
+1. Allez sur **[app.pagescms.org](https://app.pagescms.org)** et cliquez sur
+   **« Sign in with GitHub »** (connexion avec le compte GitHub qui possède le site).
+2. Autorisez l'application **Pages CMS** à accéder au dépôt **`Savgat/site`**
+   (vous pouvez limiter l'accès à ce seul dépôt).
+3. Le site apparaît dans la liste : cliquez dessus. C'est prêt&nbsp;! ✅
+
+**Au quotidien** :
+
+- **Articles du blog** → écrire un nouvel article, choisir la catégorie, ajouter
+  une image de couverture et un PDF à télécharger, rédiger le texte, puis **Save**.
+- **Les livres** → modifier titres, prix, descriptions, couvertures, liens d'achat.
+- **Pages « À propos » / « Mentions légales »** → modifier le texte.
+
+À chaque enregistrement, le site se met à jour tout seul en une minute environ.
+Astuce : on peut inviter Savannah comme **collaboratrice** du dépôt (Settings →
+Collaborators) pour qu'elle se connecte avec son propre compte GitHub.
+
+> Pour les pages, laissez tels quels les petits bouts entre `{{ }}` ou `{% %}` :
+> ce sont des éléments techniques (liens, conditions) gérés par le site.
 
 ---
 
