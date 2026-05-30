@@ -128,9 +128,16 @@ Tout se passe dans `_data/books.yml`. Copiez un bloc existant et adaptez-le
      enabled: true
      publisher_id: "ca-pub-VOTRE-NUMERO"
    ```
-3. Créez des blocs d'annonces dans AdSense et remplacez les `slot="..."` dans
-   les emplacements déjà placés (`_includes/adsense.html` est inclus en bas
-   d'article, en colonne latérale, sur l'accueil, etc.).
+3. **Mode discret (déjà configuré).** Le site n'affiche **qu'une seule annonce,
+   en bas des articles de blog**. Les pages Accueil, Livres, Blog et Catégories
+   restent **sans publicité** (pour rester sobres et ne pas concurrencer la vente
+   des livres). Côté AdSense, créez **un bloc d'annonces de type « Display »**
+   (responsive), puis collez son identifiant de *slot* dans
+   [_layouts/post.html](_layouts/post.html) à la place de `slot="0000000001"`.
+   - ⚠️ N'activez **pas** les « Auto ads » de Google : elles insèrent des pubs
+     partout (y compris en plein écran) — l'inverse du mode discret. On garde les
+     emplacements manuels. Si vous y tenez, désactivez au moins les formats
+     **Ancre** et **Vignette** et baissez la « charge publicitaire ».
 4. **Bloquer les annonces indésirables — INDISPENSABLE.** Le site s'adresse à
    des enfants et des familles : vous **devez** bloquer les catégories
    sensibles. Dans AdSense → **Brand safety / Blocage des annonces →
