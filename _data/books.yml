@@ -1,40 +1,35 @@
-# Fiche des livres. Pour ajouter un livre, copiez un bloc et adaptez-le.
-# - cover : image de couverture dans /assets/img/livres/ (remplacez les
-#   visuels provisoires par les vraies couvertures dès que possible).
-# - featured : true = mis en avant dans la colonne latérale des articles.
-
-- id: "articule"
-  title: "Articule !"
-  subtitle: "Un album malin sur les homophones et les jeux de mots"
-  age: "3 à 7 ans"
-  format: "Album cartonné · 36 pages · 21 × 21 cm · tout en couleur"
-  price_print: "20,19 €"
-  price_ebook: "8,69 €"
-  cover: "/assets/img/livres/articule.svg"
-  buy_url: "https://www.thebookedition.com/fr/articule--p-429601.html"
-  theme: "Langage & vocabulaire"
+- id: articule
+  title: Articule !
+  subtitle: Un album malin sur les homophones et les jeux de mots
+  age: 3 à 7 ans
+  format: Album cartonné · 36 pages · 21 × 21 cm · tout en couleur
+  price_print: 20,19 €
+  price_ebook: 8,69 €
+  cover: /assets/img/articule--1.jpg
+  buy_url: https://www.thebookedition.com/fr/articule--p-429601.html
+  theme: Langage & vocabulaire
   featured: true
-  excerpt: "Quand une baleine devient une belle laine, qu'une autruche devient une autre ruche et qu'un radiateur devient un radis aviateur…"
-  description: >-
-    Un album plein de malice pour explorer les homophones et les jeux de mots
-    nés de la prononciation. Les enfants rient des images surprenantes tout en
-    affinant leur écoute et leur langage. Un guide d'exploitation pédagogique
-    est disponible pour la classe : il couvre plusieurs compétences du Cycle 1.
-
-- id: "les-jus-olympiques"
-  title: "Les Jus olympiques"
-  subtitle: "La grande compétition au pays des fruits et des légumes"
-  age: "3 à 7 ans"
-  format: "Album cartonné · 26 pages · 21 × 21 cm · tout en couleur"
-  price_print: "16,00 €"
-  price_ebook: ""
-  cover: "/assets/img/livres/les-jus-olympiques.svg"
-  buy_url: "https://www.thebookedition.com/fr/les-jus-olympiques-p-405737.html"
-  theme: "Alimentation & nature"
+  excerpt: Quand une baleine devient une belle laine, qu'une autruche devient une
+    autre ruche et qu'un radiateur devient un radis aviateur, le monde devient
+    plus compliqué, ou alors bien plus simple...
+  description: "Un album plein de malice pour explorer les homophones et les jeux
+    de mots nés de la prononciation. Les enfants rient des images surprenantes
+    tout en affinant leur écoute et leur langage. Un guide d'exploitation
+    pédagogique est disponible pour la classe : il couvre plusieurs compétences
+    et domaines du Cycle 1."
+- id: les-jus-olympiques
+  title: Les Jus olympiques
+  subtitle: La grande compétition au pays des fruits et des légumes
+  age: 3 à 7 ans
+  format: Album cartonné · 26 pages · 21 × 21 cm · tout en couleur
+  price_print: 16,00 €
+  buy_url: https://www.thebookedition.com/fr/les-jus-olympiques-p-405737.html
+  theme: Alimentation & sport
   featured: true
-  excerpt: "C'est le grand jour ! Au pays des fruits et des légumes a lieu la grande compétition estivale des Jus olympiques."
-  description: >-
-    Un album joyeux pour découvrir le vocabulaire des fruits, des légumes et
-    des sports olympiques. Sa structure simple et répétitive, à la manière
-    d'une comptine, aide les plus jeunes à s'approprier facilement les mots
-    nouveaux. Un bel outil pour parler d'alimentation et de sport en maternelle.
+  excerpt: C'est le grand jour ! Au pays des fruits et des légumes a lieu la
+    grande compétition estivale des Jus olympiques.
+  description: Un album joyeux pour découvrir le vocabulaire des fruits, des
+    légumes et des sports olympiques. Sa structure simple et répétitive, à la
+    manière d'une comptine, aide les plus jeunes à s'approprier facilement les
+    mots nouveaux. Un indispensable pour parler d'alimentation et de sport en
+    maternelle.
