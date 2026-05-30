@@ -1,0 +1,16 @@
+{%- comment -%} Fil d'Ariane structuré (JSON-LD) pour un article — aide Google à
+  afficher Accueil › Blog › Catégorie dans les résultats. {%- endcomment -%}
+{%- assign cat = page.categories | first -%}
+{%- if cat -%}{%- assign cat_slug = cat | slugify -%}{%- assign last_pos = 4 -%}{%- else -%}{%- assign last_pos = 3 -%}{%- endif -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": {{ '/' | absolute_url | jsonify }} },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": {{ '/blog/' | absolute_url | jsonify }} }{% if cat %},
+    { "@type": "ListItem", "position": 3, "name": {{ cat | jsonify }}, "item": {{ '/categories/' | absolute_url | append: '#' | append: cat_slug | jsonify }} }{% endif %},
+    { "@type": "ListItem", "position": {{ last_pos }}, "name": {{ page.title | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+  ]
+}
+</script>

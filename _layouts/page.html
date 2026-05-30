@@ -10,10 +10,10 @@ layout: default
 
 <div class="container section">
   <article class="prose">
-    {%- if page.image -%}
+    {%- if page.portrait -%}
     <figure class="page-portrait">
-      <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title }}" width="220" height="220">
-      {%- if page.image_caption -%}<figcaption class="form-note">{{ page.image_caption }}</figcaption>{%- endif -%}
+      <img src="{{ page.portrait | relative_url }}" alt="{{ page.portrait_alt | default: page.title }}" width="220" height="220">
+      {%- if page.portrait_caption -%}<figcaption class="form-note">{{ page.portrait_caption }}</figcaption>{%- endif -%}
     </figure>
     {%- endif -%}
 

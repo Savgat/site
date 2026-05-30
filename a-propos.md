@@ -4,9 +4,9 @@ title: "À propos"
 subtitle: "Professeure des écoles en maternelle et autrice jeunesse."
 permalink: /a-propos/
 description: "Savannah Gatineau, professeure des écoles en maternelle, crée des albums jeunesse pédagogiques pour éveiller les 3-7 ans au langage, à la nature et à la philosophie."
-image: /assets/img/savannah.svg
-image_alt: "Portrait de Savannah Gatineau"
-image_caption: "Savannah Gatineau, autrice jeunesse et professeure des écoles."
+portrait: /assets/img/savannah.svg
+portrait_alt: "Portrait de Savannah Gatineau"
+portrait_caption: "Savannah Gatineau, autrice jeunesse et professeure des écoles."
 cta_label: "Découvrir les livres"
 cta_url: /livres/
 ---

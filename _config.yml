@@ -14,6 +14,16 @@ description: >-
 lang: "fr"
 author: "Savannah Gatineau"
 
+# --- Référencement (SEO) ------------------------------------
+# L'image de partage par défaut (/assets/img/og-default.png) est appliquée à
+# toutes les pages via « defaults » plus bas ; les articles gardent leur propre
+# image de couverture.
+# Codes de vérification des moteurs de recherche (voir README, section SEO).
+# Collez le code fourni par Google Search Console / Bing, SANS les balises HTML.
+webmaster_verifications:
+  google: ""
+  bing: ""
+
 # Adresse de contact affichée sur le site (à remplacer)
 email: "contact@savannahgatineau.fr"
 
@@ -72,6 +82,7 @@ defaults:
       path: ""
     values:
       layout: "page"
+      image: "/assets/img/og-default.png"
 
 # Plugins compatibles GitHub Pages (build natif, aucune action requise)
 plugins:

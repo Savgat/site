@@ -177,6 +177,66 @@ alors `url: "https://savannahgatineau.fr"` et `baseurl: ""` dans `_config.yml`.
 
 ---
 
+## 🔎 Être trouvé sur Google (référencement / SEO)
+
+Le site est **déjà optimisé techniquement** : plan du site (`sitemap.xml`), balises
+titre/description par page, aperçus de partage (Open Graph + image), données
+structurées (autrice, livres, fil d'Ariane), pages rapides et adaptées au mobile,
+URL propres. Voici comment aller plus loin — par ordre d'impact.
+
+### Étape 1 — Se faire indexer (le plus important, à faire en premier)
+
+Un site neuf n'apparaît pas tout seul ; il faut le déclarer.
+
+1. **Google Search Console** → <https://search.google.com/search-console>
+   - Ajoutez une propriété de type **« Préfixe d'URL »** : `https://savgat.github.io/site/`
+   - Méthode de validation **« Balise HTML »** : Google donne un code
+     (`<meta name="google-site-verification" content="XXXX">`). Copiez **seulement
+     le code `XXXX`** dans `_config.yml` → `webmaster_verifications: google: "XXXX"`,
+     enregistrez (le site se reconstruit), puis cliquez **Valider**.
+   - Une fois validé : menu **Sitemaps** → soumettez `sitemap.xml`.
+   - Bonus : « Inspection de l'URL » → coller l'adresse du site → **Demander
+     l'indexation** (accélère la prise en compte).
+2. **Bing Webmaster Tools** → <https://www.bing.com/webmasters> (couvre Bing,
+   Yahoo, Ecosia, parfois DuckDuckGo). Le plus simple : **importer depuis Google
+   Search Console**. Sinon, même principe (code dans `webmaster_verifications: bing`).
+
+> ⏳ Comptez quelques jours à quelques semaines avant d'apparaître. C'est normal.
+
+### Étape 2 — Écrire pour les recherches des parents et enseignants
+
+Le contenu est le moteur n°1 du référencement. À chaque article :
+
+- Vise une **vraie recherche** : « activités homophones maternelle », « comptine
+  fruits et légumes », « fiche à imprimer maternelle », « idée lecture du soir 3 ans »…
+- Mets ces mots dans le **titre**, le **résumé** et les **sous-titres**.
+- Les **fiches à imprimer** sont un aimant à visiteurs (parents + enseignants) :
+  c'est l'angle le plus rentable.
+- Cite le **nom de l'autrice** et les **titres des livres** (« Articule ! »,
+  « Les Jus olympiques ») pour ressortir sur ces recherches de marque.
+- Publie **régulièrement** : un site vivant est mieux classé.
+
+### Étape 3 — Se faire connaître ailleurs (liens entrants)
+
+Google fait confiance à un site vers lequel d'autres pointent :
+
+- Mettez l'adresse du site dans votre **profil TheBookEdition**, vos **réseaux
+  sociaux** (surtout **Pinterest**, idéal pour les fiches et activités), et au dos
+  de vos livres.
+- Créez une fiche **autrice sur Babelio** (et Goodreads), avec le lien du site.
+- Proposez vos articles à des **blogs / groupes Facebook d'enseignants de
+  maternelle**, médiathèques, journaux locaux.
+
+### Le levier le plus efficace : un nom de domaine
+
+Tant qu'on reste sur `savgat.github.io/site/`, le site est trouvable, mais un
+**vrai domaine** (ex. `savannahgatineau.fr`, ~12 €/an — voir la section 6) est
+**le meilleur investissement SEO** : adresse mémorisable, plus crédible, et toute
+la « réputation » du référencement vous appartient au lieu d'être partagée avec
+`github.io`. À envisager dès que possible.
+
+---
+
 ## 7. Prévisualiser le site sur son ordinateur (facultatif)
 
 ```bash

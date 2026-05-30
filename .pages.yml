@@ -151,12 +151,12 @@ content:
       - name: subtitle
         label: "Sous-titre"
         type: string
-      - name: image
+      - name: portrait
         label: "Photo de Savannah"
         type: image
         options:
           media: images
-      - name: image_caption
+      - name: portrait_caption
         label: "Légende sous la photo"
         type: string
       - name: body

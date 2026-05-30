@@ -3,6 +3,7 @@ layout: default
 ---
 {%- assign cat = page.categories | first -%}
 <article class="post">
+  {% include breadcrumb-schema.html %}
 
   <header class="post-hero">
     <div class="container">
