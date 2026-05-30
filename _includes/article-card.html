@@ -1,22 +1,24 @@
-{%- comment -%} Carte d'un article de blog. Utilisation : {% include article-card.html post=post %} {%- endcomment -%}
-{%- assign post = include.post -%}
-{%- assign cat = post.categories | first -%}
-<article class="article-card" data-category="{{ cat | slugify }}">
-  <a class="article-thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
-    {%- if post.image -%}
-      <img src="{{ post.image | relative_url }}" alt="" loading="lazy" width="400" height="240">
+{%- comment -%} Carte d'un article de blog. Utilisation : {% include article-card.html post=post %}
+  NB : variables préfixées « ac_ » car {% include %} partage le scope du parent —
+  cela évite toute collision avec les boucles `for post`/`for cat` des pages appelantes. {%- endcomment -%}
+{%- assign ac_post = include.post -%}
+{%- assign ac_cat = ac_post.categories | first -%}
+<article class="article-card" data-category="{{ ac_cat | slugify }}">
+  <a class="article-thumb" href="{{ ac_post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {%- if ac_post.image -%}
+      <img src="{{ ac_post.image | relative_url }}" alt="" loading="lazy" width="400" height="240">
     {%- else -%}
       <span class="article-thumb-placeholder" aria-hidden="true">✏️</span>
     {%- endif -%}
   </a>
   <div class="article-body">
     <div class="article-meta">
-      {%- if cat -%}<a class="chip" href="{{ '/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat }}</a>{%- endif -%}
-      <time datetime="{{ post.date | date_to_xmlschema }}">{% include date_fr.html date=post.date %}</time>
-      {%- if post.pdf -%}<span class="chip chip-pdf">PDF à imprimer</span>{%- endif -%}
+      {%- if ac_cat -%}<a class="chip" href="{{ '/categories/' | relative_url }}#{{ ac_cat | slugify }}">{{ ac_cat }}</a>{%- endif -%}
+      <time datetime="{{ ac_post.date | date_to_xmlschema }}">{% include date_fr.html date=ac_post.date %}</time>
+      {%- if ac_post.pdf -%}<span class="chip chip-pdf">PDF à imprimer</span>{%- endif -%}
     </div>
-    <h3 class="article-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-    <a class="article-more" href="{{ post.url | relative_url }}">Lire l'article <span aria-hidden="true">→</span></a>
+    <h3 class="article-title"><a href="{{ ac_post.url | relative_url }}">{{ ac_post.title }}</a></h3>
+    <p class="article-excerpt">{{ ac_post.excerpt | strip_html | truncate: 140 }}</p>
+    <a class="article-more" href="{{ ac_post.url | relative_url }}">Lire l'article <span aria-hidden="true">→</span></a>
   </div>
 </article>
