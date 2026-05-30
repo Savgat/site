@@ -1,0 +1,93 @@
+# =============================================================
+#  Site Savannah Gatineau — configuration Jekyll
+#  Astuce : après TOUTE modification de ce fichier, il faut
+#  relancer le serveur local (le site GitHub se met à jour seul).
+# =============================================================
+
+# --- Identité du site ---------------------------------------
+title: "Savannah Gatineau"
+tagline: "Autrice jeunesse & enseignante en maternelle"
+description: >-
+  Albums jeunesse pédagogiques pour les 3-7 ans, ressources gratuites pour la
+  maternelle et articles pour les parents et les enseignants. Découvrez les
+  livres de Savannah Gatineau, professeure des écoles.
+lang: "fr"
+author: "Savannah Gatineau"
+
+# Adresse de contact affichée sur le site (à remplacer)
+email: "contact@savannahgatineau.fr"
+
+# --- Formulaire de contact (Formspree, gratuit) -------------
+# Laissez vide pour n'afficher QUE le lien e-mail (état par défaut, toujours
+# fonctionnel). Pour activer le formulaire : créez un formulaire sur
+# https://formspree.io, copiez son identifiant et collez-le ci-dessous.
+forms:
+  formspree_id: ""
+
+# --- Adresses (à compléter au déploiement) ------------------
+# url     : l'adresse complète du site, SANS slash final.
+#           - Page utilisateur : https://VOTRE-PSEUDO.github.io
+#           - Domaine perso     : https://savannahgatineau.fr
+# baseurl : laissez "" pour une page utilisateur ou un domaine perso.
+#           Mettez "/nom-du-depot" UNIQUEMENT pour un "project site"
+#           du type https://VOTRE-PSEUDO.github.io/nom-du-depot
+url: ""
+baseurl: ""
+
+# --- Réseaux sociaux (laisser vide pour masquer le lien) ----
+social:
+  instagram: ""
+  facebook: ""
+  pinterest: ""
+  youtube: ""
+
+# --- Publicités Google AdSense ------------------------------
+# 1. Créez un compte sur https://adsense.google.com
+# 2. Une fois VALIDÉ, mettez enabled: true et collez votre identifiant
+#    (commence par "ca-pub-").
+# 3. Dans le tableau de bord AdSense > "Blocage des annonces", bloquez les
+#    catégories sensibles (jeux d'argent, rencontres, alcool, contenu pour
+#    adultes…). Voir le README pour la marche à suivre détaillée.
+adsense:
+  enabled: false
+  publisher_id: "ca-pub-XXXXXXXXXXXXXXXX"
+
+# --- Boutique : lien vers la fiche autrice (vente externe) ---
+shop_url: "https://www.thebookedition.com/fr/58005_savannah-gatineau"
+
+# --- Réglages techniques ------------------------------------
+markdown: kramdown
+permalink: /blog/:title/
+timezone: Europe/Paris
+
+# Valeurs par défaut des contenus
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: false
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+# Plugins compatibles GitHub Pages (build natif, aucune action requise)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Flux RSS
+feed:
+  path: /feed.xml
+
+# Fichiers ignorés au build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .gitignore
+  - .github

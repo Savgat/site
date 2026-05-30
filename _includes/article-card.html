@@ -1,0 +1,22 @@
+{%- comment -%} Carte d'un article de blog. Utilisation : {% include article-card.html post=post %} {%- endcomment -%}
+{%- assign post = include.post -%}
+{%- assign cat = post.categories | first -%}
+<article class="article-card" data-category="{{ cat | slugify }}">
+  <a class="article-thumb" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {%- if post.image -%}
+      <img src="{{ post.image | relative_url }}" alt="" loading="lazy" width="400" height="240">
+    {%- else -%}
+      <span class="article-thumb-placeholder" aria-hidden="true">✏️</span>
+    {%- endif -%}
+  </a>
+  <div class="article-body">
+    <div class="article-meta">
+      {%- if cat -%}<a class="chip" href="{{ '/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat }}</a>{%- endif -%}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{% include date_fr.html date=post.date %}</time>
+      {%- if post.pdf -%}<span class="chip chip-pdf">PDF à imprimer</span>{%- endif -%}
+    </div>
+    <h3 class="article-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+    <a class="article-more" href="{{ post.url | relative_url }}">Lire l'article <span aria-hidden="true">→</span></a>
+  </div>
+</article>

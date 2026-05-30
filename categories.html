@@ -1,0 +1,40 @@
+---
+layout: default
+title: "Catégories"
+permalink: /categories/
+description: "Parcourez les articles de Savannah Gatineau par thème : activités maternelle, langage et vocabulaire, alimentation et nature, comptines et lecture, coulisses d'autrice."
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Catégories</h1>
+    <p class="page-hero-subtitle">Tous les articles rangés par thème pour trouver rapidement ce que vous cherchez.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    {%- for cat in site.data.categories -%}
+    {%- assign cat_posts = site.categories[cat.name] -%}
+    <section class="cat-block" id="{{ cat.name | slugify }}">
+      <div class="cat-head">
+        <span class="cat-icon" aria-hidden="true">{{ cat.icon }}</span>
+        <div>
+          <h2>{{ cat.name }}</h2>
+          <p class="cat-desc">{{ cat.description }}</p>
+        </div>
+      </div>
+
+      {%- if cat_posts and cat_posts.size > 0 -%}
+      <div class="cat-cards">
+        {%- for post in cat_posts -%}
+          {% include article-card.html post=post %}
+        {%- endfor -%}
+      </div>
+      {%- else -%}
+      <p class="form-note">Aucun article dans cette catégorie pour le moment — à venir bientôt&nbsp;!</p>
+      {%- endif -%}
+    </section>
+    {%- endfor -%}
+  </div>
+</div>

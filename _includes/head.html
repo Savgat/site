@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2a9d8f">
+
+  {%- comment -%} SEO : titre, description, Open Graph, Twitter, JSON-LD {%- endcomment -%}
+  {% seo %}
+
+  {%- comment -%} Favicon (remplacez les fichiers dans /assets/img/) {%- endcomment -%}
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.svg' | relative_url }}">
+
+  {%- comment -%} Flux RSS du blog {%- endcomment -%}
+  {% feed_meta %}
+
+  {%- comment -%} Polices Google {%- endcomment -%}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  {%- comment -%} Feuille de style du site {%- endcomment -%}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  {%- comment -%}
+    Le script Google AdSense N'EST PAS chargé ici directement : il l'est
+    uniquement APRÈS le consentement de l'internaute (voir la bannière de
+    consentement dans default.html), afin de respecter le RGPD / ePrivacy.
+  {%- endcomment -%}
+
+  {%- comment -%} Données structurées : autrice (page d'accueil) {%- endcomment -%}
+  {%- if page.url == "/" -%}{% include schema-person.html %}{%- endif -%}
+</head>

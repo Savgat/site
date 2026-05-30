@@ -1,0 +1,14 @@
+# Barre de navigation principale.
+# Ajoutez / réordonnez les entrées ici : elles se mettent à jour partout.
+- title: "Accueil"
+  url: "/"
+- title: "Les livres"
+  url: "/livres/"
+- title: "Le blog"
+  url: "/blog/"
+- title: "Catégories"
+  url: "/categories/"
+- title: "À propos"
+  url: "/a-propos/"
+- title: "Contact"
+  url: "/contact/"

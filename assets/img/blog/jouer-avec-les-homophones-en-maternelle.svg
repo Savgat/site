@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Illustration : jouer avec les homophones">
+  <defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a9d8f"/><stop offset="1" stop-color="#e9c46a"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#a)"/>
+  <circle cx="200" cy="160" r="110" fill="#fff" opacity="0.12"/>
+  <circle cx="1010" cy="500" r="150" fill="#fff" opacity="0.10"/>
+  <text x="80" y="300" font-family="Fredoka, sans-serif" font-size="92" font-weight="700" fill="#fff">Articule&#160;!</text>
+  <text x="84" y="370" font-family="Nunito, sans-serif" font-size="40" fill="#fff" opacity="0.92">Jouer avec les homophones</text>
+  <text x="980" y="230" font-size="120">🗣️</text>
+</svg>

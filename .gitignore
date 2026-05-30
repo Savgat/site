@@ -1,0 +1,25 @@
+# Build Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Dépendances Ruby (installées localement)
+vendor/
+.bundle/
+Gemfile.lock
+
+# Clés de déploiement SSH — NE JAMAIS committer la clé privée
+deploy_key
+deploy_key.pub
+*.pem
+id_ed25519*
+id_rsa*
+
+# Système / éditeurs
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/

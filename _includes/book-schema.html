@@ -1,0 +1,17 @@
+{%- comment -%} Données structurées JSON-LD : un livre. Usage : {% include book-schema.html book=book %} {%- endcomment -%}
+{%- assign book = include.book -%}
+{%- assign price = book.price_print | remove: "€" | replace: ",", "." | strip -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": {{ book.title | jsonify }},
+  "author": { "@type": "Person", "name": {{ site.author | jsonify }} },
+  "inLanguage": "fr",
+  "bookFormat": "https://schema.org/Hardcover",
+  "image": {{ book.cover | absolute_url | jsonify }},
+  "url": {{ book.buy_url | jsonify }},
+  "audience": { "@type": "PeopleAudience", "suggestedMinAge": 3, "suggestedMaxAge": 7 }{% if price != "" %},
+  "offers": { "@type": "Offer", "price": {{ price | jsonify }}, "priceCurrency": "EUR", "availability": "https://schema.org/InStock", "url": {{ book.buy_url | jsonify }} }{% endif %}
+}
+</script>

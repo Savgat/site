@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{%- assign cat = page.categories | first -%}
+<article class="post">
+
+  <header class="post-hero">
+    <div class="container">
+      <p class="post-breadcrumb">
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        {%- if cat -%} <span aria-hidden="true">›</span> <a href="{{ '/categories/' | relative_url }}#{{ cat | slugify }}">{{ cat }}</a>{%- endif -%}
+      </p>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{% include date_fr.html date=page.date %}</time>
+        {%- if page.author -%} · par {{ page.author }}{%- else -%} · par {{ site.author }}{%- endif -%}
+      </p>
+      {%- if page.image -%}
+      {%- assign cover_alt = page.image_alt | default: page.title -%}
+      <img class="post-cover" src="{{ page.image | relative_url }}" alt="{{ cover_alt }}" width="1200" height="630">
+      {%- endif -%}
+    </div>
+  </header>
+
+  <div class="container post-layout">
+    <div class="post-content prose">
+
+      {{ content }}
+
+      {%- comment -%} Téléchargement du PDF associé (fiche pédagogique, etc.) {%- endcomment -%}
+      {%- if page.pdf -%}
+      <div class="pdf-box">
+        <div class="pdf-box-icon" aria-hidden="true">📄</div>
+        <div class="pdf-box-body">
+          <h2 class="pdf-box-title">{{ page.pdf_title | default: "Ressource à télécharger" }}</h2>
+          {%- if page.pdf_description -%}<p>{{ page.pdf_description }}</p>{%- endif -%}
+          <a class="btn btn-accent" href="{{ page.pdf | relative_url }}" download>Télécharger le PDF</a>
+        </div>
+      </div>
+      {%- endif -%}
+
+      {%- comment -%} Bloc publicitaire en bas d'article {%- endcomment -%}
+      {% include adsense.html slot="0000000001" %}
+
+      {%- comment -%} Étiquettes {%- endcomment -%}
+      {%- if page.tags and page.tags.size > 0 -%}
+      <ul class="tag-list" aria-label="Mots-clés">
+        {%- for tag in page.tags -%}<li class="chip chip-tag">#{{ tag }}</li>{%- endfor -%}
+      </ul>
+      {%- endif -%}
+
+      <p class="post-back"><a href="{{ '/blog/' | relative_url }}">← Revenir au blog</a></p>
+    </div>
+
+    <aside class="post-aside">
+      {% include book-promo.html %}
+    </aside>
+  </div>
+
+</article>

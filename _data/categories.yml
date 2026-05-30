@@ -1,0 +1,18 @@
+# Catégories du blog.
+# IMPORTANT : le champ "name" doit correspondre EXACTEMENT à ce que vous
+# écrivez dans "categories:" en haut de chaque article (voir le README).
+- name: "Activités maternelle"
+  icon: "🎨"
+  description: "Idées de jeux, ateliers et fiches à imprimer pour la classe et la maison."
+- name: "Langage & vocabulaire"
+  icon: "🗣️"
+  description: "Jeux de mots, homophones, comptines et tout pour éveiller au langage oral."
+- name: "Alimentation & nature"
+  icon: "🥕"
+  description: "Fruits, légumes, jardin et bien manger : apprendre la nature en s'amusant."
+- name: "Comptines & lecture"
+  icon: "📖"
+  description: "Rituels de lecture, sélections d'albums et plaisir des histoires du soir."
+- name: "Coulisses d'autrice"
+  icon: "✍️"
+  description: "Le métier de professeure des écoles et les secrets de fabrication des albums."

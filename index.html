@@ -1,0 +1,110 @@
+---
+layout: default
+title: "Accueil"
+description: "Savannah Gatineau, professeure des écoles et autrice jeunesse. Albums pédagogiques pour les 3-7 ans, ressources gratuites pour la maternelle et idées d'activités pour parents et enseignants."
+---
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Autrice jeunesse &amp; professeure des écoles</p>
+      <h1>Des albums qui donnent le goût des mots et de la découverte</h1>
+      <p class="hero-lead">Savannah Gatineau écrit des albums pédagogiques joyeux pour les enfants de 3 à 7 ans, et partage ici des ressources gratuites pour les parents et les enseignants de maternelle.</p>
+      <div class="hero-actions">
+        <a class="btn btn-accent" href="{{ '/livres/' | relative_url }}">Découvrir les livres</a>
+        <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Lire le blog</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      {%- for book in site.data.books -%}
+        {%- if book.featured -%}
+        <a class="book-cover" href="{{ book.buy_url }}" rel="noopener" target="_blank" aria-label="Voir « {{ book.title }} »">
+          {%- if book.cover -%}
+            <img src="{{ book.cover | relative_url }}" alt="Couverture de « {{ book.title }} »" width="230" height="230">
+          {%- else -%}
+            <span class="book-cover-placeholder" aria-hidden="true">{{ book.title | slice: 0, 1 }}</span>
+          {%- endif -%}
+        </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LIVRES ===================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">À lire et à offrir</p>
+      <h2>Les livres de Savannah</h2>
+      <p>Des albums tout en couleur, à la fois tendres et malins, conçus comme de vrais outils pour apprendre en s'amusant.</p>
+    </div>
+    <div class="book-grid">
+      {%- for book in site.data.books -%}
+        {% include book-card.html book=book %}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PUBLICITÉ ===================== -->
+<div class="container">
+  {% include adsense.html slot="0000000003" %}
+</div>
+
+<!-- ===================== DERNIERS ARTICLES ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Le blog</p>
+      <h2>Idées, activités &amp; ressources</h2>
+      <p>Des articles concrets pour éveiller les tout-petits au langage, à la nature et au plaisir de lire.</p>
+    </div>
+    {%- if site.posts.size > 0 -%}
+    <div class="article-grid">
+      {%- for post in site.posts limit: 3 -%}
+        {% include article-card.html post=post %}
+      {%- endfor -%}
+    </div>
+    <p style="text-align:center; margin-top:2rem;">
+      <a class="btn btn-ghost" href="{{ '/blog/' | relative_url }}">Voir tous les articles</a>
+    </p>
+    {%- else -%}
+    <p class="empty-state">Les premiers articles arrivent très bientôt !</p>
+    {%- endif -%}
+  </div>
+</section>
+
+<!-- ===================== CATÉGORIES ===================== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Explorer</p>
+      <h2>Par thème</h2>
+    </div>
+    <div class="book-grid">
+      {%- for cat in site.data.categories -%}
+      <a class="book-card" href="{{ '/categories/' | relative_url }}#{{ cat.name | slugify }}" style="text-decoration:none;">
+        <div class="book-body">
+          <div style="font-size:2.4rem;line-height:1;">{{ cat.icon }}</div>
+          <h3 class="book-title">{{ cat.name }}</h3>
+          <p class="book-subtitle">{{ cat.description }}</p>
+          <span class="article-more" style="margin-top:auto;">Voir les articles <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APPEL ===================== -->
+<section class="section">
+  <div class="container">
+    <div class="cta">
+      <h2>Enseignant·e ou parent ?</h2>
+      <p>Découvrez les albums pédagogiques de Savannah pour travailler le langage, le vocabulaire et l'alimentation en maternelle — et n'hésitez pas à la contacter pour une dédicace ou une rencontre.</p>
+      <a class="btn btn-accent" href="{{ '/contact/' | relative_url }}">Prendre contact</a>
+    </div>
+  </div>
+</section>

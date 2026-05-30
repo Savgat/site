@@ -1,0 +1,20 @@
+{%- comment -%} Données structurées JSON-LD : l'autrice (page d'accueil). {%- endcomment -%}
+{%- capture sameas_raw -%}
+{%- if site.social.instagram != "" %}{{ site.social.instagram }}|{% endif -%}
+{%- if site.social.facebook != "" %}{{ site.social.facebook }}|{% endif -%}
+{%- if site.social.pinterest != "" %}{{ site.social.pinterest }}|{% endif -%}
+{%- if site.social.youtube != "" %}{{ site.social.youtube }}|{% endif -%}
+{%- endcapture -%}
+{%- assign sameas = sameas_raw | split: "|" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ site.author | jsonify }},
+  "jobTitle": "Autrice jeunesse et professeure des écoles",
+  "description": {{ site.description | strip_newlines | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "image": {{ '/assets/img/savannah.svg' | absolute_url | jsonify }}{% if sameas.size > 0 %},
+  "sameAs": {{ sameas | jsonify }}{% endif %}
+}
+</script>

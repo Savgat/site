@@ -1,0 +1,49 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+
+    <div class="footer-col">
+      <h2 class="footer-title">{{ site.title }}</h2>
+      <p class="footer-text">{{ site.tagline }}. Des albums et des ressources pour éveiller les 3-7 ans au langage, à la nature et au plaisir d'apprendre.</p>
+      <a class="btn btn-accent" href="{{ '/livres/' | relative_url }}">Découvrir les livres</a>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-title">Navigation</h2>
+      <ul class="footer-links">
+        {%- for item in site.data.navigation -%}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-title">Rester en contact</h2>
+      <ul class="footer-links">
+        {%- if site.email -%}<li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>{%- endif -%}
+        <li><a href="{{ '/contact/' | relative_url }}">Page contact</a></li>
+        <li><a href="{{ '/feed.xml' | relative_url }}">Flux RSS du blog</a></li>
+      </ul>
+      {%- assign has_social = false -%}
+      {%- if site.social.instagram != "" or site.social.facebook != "" or site.social.pinterest != "" or site.social.youtube != "" -%}{%- assign has_social = true -%}{%- endif -%}
+      {%- if has_social -%}
+      <ul class="social-list" aria-label="Réseaux sociaux">
+        {%- if site.social.instagram != "" -%}<li><a href="{{ site.social.instagram }}" rel="me noopener" target="_blank">Instagram</a></li>{%- endif -%}
+        {%- if site.social.facebook != "" -%}<li><a href="{{ site.social.facebook }}" rel="me noopener" target="_blank">Facebook</a></li>{%- endif -%}
+        {%- if site.social.pinterest != "" -%}<li><a href="{{ site.social.pinterest }}" rel="me noopener" target="_blank">Pinterest</a></li>{%- endif -%}
+        {%- if site.social.youtube != "" -%}<li><a href="{{ site.social.youtube }}" rel="me noopener" target="_blank">YouTube</a></li>{%- endif -%}
+      </ul>
+      {%- endif -%}
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© {{ site.time | date: "%Y" }} {{ site.author }}. Tous droits réservés.</p>
+      <ul class="footer-legal">
+        <li><a href="{{ '/mentions-legales/' | relative_url }}">Mentions légales</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

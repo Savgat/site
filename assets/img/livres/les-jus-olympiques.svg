@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" role="img" aria-label="Couverture provisoire — Les Jus olympiques">
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e76f51"/>
+      <stop offset="1" stop-color="#f4a261"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#g2)"/>
+  <circle cx="480" cy="140" r="70" fill="#ffffff" opacity="0.16"/>
+  <circle cx="130" cy="480" r="95" fill="#ffffff" opacity="0.13"/>
+  <text x="50%" y="42%" text-anchor="middle" font-family="Fredoka, Trebuchet MS, sans-serif" font-size="64" font-weight="700" fill="#ffffff">Les Jus</text>
+  <text x="50%" y="53%" text-anchor="middle" font-family="Fredoka, Trebuchet MS, sans-serif" font-size="64" font-weight="700" fill="#ffffff">olympiques</text>
+  <text x="50%" y="63%" text-anchor="middle" font-family="Nunito, sans-serif" font-size="25" fill="#ffffff" opacity="0.92">Fruits, légumes &amp; sport</text>
+  <text x="50%" y="88%" text-anchor="middle" font-family="Nunito, sans-serif" font-size="22" fill="#ffffff" opacity="0.8">Savannah Gatineau · dès 3 ans</text>
+</svg>

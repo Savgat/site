@@ -1,0 +1,23 @@
+{%- comment -%}
+  Emplacement publicitaire Google AdSense.
+  Utilisation :  {% include adsense.html slot="1234567890" %}
+  - "slot" est l'identifiant d'un bloc d'annonces créé dans AdSense.
+  - N'affiche rien tant que adsense.enabled = false dans _config.yml,
+    donc aucune case vide ne s'affiche avant la validation du compte.
+  - ⚠️ Quand adsense.enabled = true, le script publicitaire n'est chargé
+    qu'APRÈS le consentement de l'internaute (bannière RGPD, voir default.html).
+{%- endcomment -%}
+{%- if site.adsense.enabled -%}
+<aside class="ad-slot" aria-label="Annonce publicitaire">
+  <span class="ad-label">Publicité</span>
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="{{ site.adsense.publisher_id }}"
+       data-ad-slot="{{ include.slot }}"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</aside>
+{%- endif -%}

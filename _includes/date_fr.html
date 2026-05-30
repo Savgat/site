@@ -1,0 +1,23 @@
+{%- comment -%}
+  Affiche une date en français (jour mois année), sans dépendre de la locale
+  du serveur. GitHub Pages construit en locale anglaise : le filtre %B donnerait
+  « May » au lieu de « mai ». Usage : {% include date_fr.html date=page.date %}
+{%- endcomment -%}
+{%- assign d = include.date -%}
+{%- assign mnum = d | date: "%-m" -%}
+{%- assign mname = "" -%}
+{%- case mnum -%}
+{%- when "1" -%}{%- assign mname = "janvier" -%}
+{%- when "2" -%}{%- assign mname = "février" -%}
+{%- when "3" -%}{%- assign mname = "mars" -%}
+{%- when "4" -%}{%- assign mname = "avril" -%}
+{%- when "5" -%}{%- assign mname = "mai" -%}
+{%- when "6" -%}{%- assign mname = "juin" -%}
+{%- when "7" -%}{%- assign mname = "juillet" -%}
+{%- when "8" -%}{%- assign mname = "août" -%}
+{%- when "9" -%}{%- assign mname = "septembre" -%}
+{%- when "10" -%}{%- assign mname = "octobre" -%}
+{%- when "11" -%}{%- assign mname = "novembre" -%}
+{%- when "12" -%}{%- assign mname = "décembre" -%}
+{%- endcase -%}
+{{- d | date: "%-d" }} {{ mname }} {{ d | date: "%Y" -}}

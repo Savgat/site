@@ -1,0 +1,10 @@
+---
+permalink: /ads.txt
+sitemap: false
+---
+# Fichier ads.txt — autorise Google AdSense à diffuser des annonces sur ce domaine.
+# Renseignez votre identifiant éditeur dans _config.yml (adsense.publisher_id)
+# et passez adsense.enabled à true : la ligne ci-dessous s'activera alors.
+{%- if site.adsense.enabled %}
+google.com, {{ site.adsense.publisher_id | remove_first: "ca-" }}, DIRECT, f08c47fec0942fa0
+{%- endif %}

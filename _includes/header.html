@@ -1,0 +1,38 @@
+<header class="site-header">
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <div class="container header-inner">
+
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true">📚</span>
+      <span class="brand-text">
+        <span class="brand-name">{{ site.title }}</span>
+        <span class="brand-tagline">{{ site.tagline }}</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-principal" aria-label="Ouvrir le menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav class="site-nav" id="menu-principal" aria-label="Navigation principale">
+      <ul class="nav-list">
+        {%- assign current = page.url -%}
+        {%- for item in site.data.navigation -%}
+          {%- assign link = item.url | relative_url -%}
+          {%- assign is_active = false -%}
+          {%- if item.url == "/" and current == "/" -%}
+            {%- assign is_active = true -%}
+          {%- elsif item.url != "/" and current contains item.url -%}
+            {%- assign is_active = true -%}
+          {%- endif -%}
+          <li>
+            <a href="{{ link }}"{% if is_active %} class="is-active" aria-current="page"{% endif %}>{{ item.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+  </div>
+</header>

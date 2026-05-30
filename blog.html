@@ -1,0 +1,40 @@
+---
+layout: default
+title: "Le blog"
+permalink: /blog/
+description: "Articles, activités et ressources gratuites de Savannah Gatineau pour éveiller les enfants de 3 à 7 ans : langage, lecture, alimentation, idées pour la maternelle."
+---
+
+<div class="page-hero">
+  <div class="container">
+    <h1 class="page-hero-title">Le blog</h1>
+    <p class="page-hero-subtitle">Des idées concrètes et des ressources à imprimer pour les parents et les enseignants de maternelle. Filtrez par thème ci-dessous.</p>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+
+    <div class="filter-bar" data-filter-bar role="group" aria-label="Filtrer par catégorie">
+      <button class="filter-btn is-active" data-cat="all" type="button">Tout</button>
+      {%- for cat in site.data.categories -%}
+      <button class="filter-btn" data-cat="{{ cat.name | slugify }}" type="button">{{ cat.icon }} {{ cat.name }}</button>
+      {%- endfor -%}
+    </div>
+
+    {%- if site.posts.size > 0 -%}
+    <div class="article-grid">
+      {%- for post in site.posts -%}
+        {% include article-card.html post=post %}
+      {%- endfor -%}
+    </div>
+    {%- else -%}
+    <p class="empty-state">Les premiers articles arrivent très bientôt ! Revenez vite. 🌱</p>
+    {%- endif -%}
+
+    <div style="margin-top:2.5rem;">
+      {% include adsense.html slot="0000000005" %}
+    </div>
+
+  </div>
+</div>

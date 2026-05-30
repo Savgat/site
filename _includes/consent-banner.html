@@ -1,0 +1,16 @@
+{%- comment -%}
+  Bannière de consentement aux cookies publicitaires (RGPD / ePrivacy).
+  Affichée uniquement si AdSense est activé. Le script publicitaire n'est
+  chargé qu'après un clic sur « Accepter » (voir le script dans default.html).
+{%- endcomment -%}
+<div id="consent-banner" class="consent-banner" role="dialog" aria-live="polite" aria-label="Gestion des cookies" hidden>
+  <p class="consent-text">
+    Ce site affiche des publicités (Google AdSense) pour rester gratuit. Avec votre accord,
+    des cookies publicitaires peuvent être déposés. Vous pouvez accepter ou refuser.
+    <a href="{{ '/mentions-legales/' | relative_url }}">En savoir plus</a>.
+  </p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-ghost" id="consent-refuse">Refuser</button>
+    <button type="button" class="btn btn-accent" id="consent-accept">Accepter</button>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+---
+layout: page
+title: "Contact"
+subtitle: "Une question, une dédicace, un projet pour l'école ? Écrivez à Savannah."
+permalink: /contact/
+description: "Contactez Savannah Gatineau, autrice jeunesse et professeure des écoles : dédicaces, rencontres en classe, commandes groupées, presse."
+---
+
+<p>N'hésitez pas à écrire à Savannah pour&nbsp;:</p>
+<ul>
+  <li>📚 une <strong>commande groupée</strong> pour une école, une médiathèque ou une association&nbsp;;</li>
+  <li>✍️ une <strong>dédicace</strong> ou une <strong>rencontre</strong> en classe&nbsp;;</li>
+  <li>🗞️ une demande <strong>presse</strong> ou un partenariat&nbsp;;</li>
+  <li>💬 simplement partager un retour sur un livre ou un article.</li>
+</ul>
+
+{%- comment -%}
+  Le formulaire ne s'affiche QUE si un identifiant Formspree est renseigné dans
+  _config.yml (forms.formspree_id). Sinon, on met en avant le contact par e-mail,
+  toujours fonctionnel. Voir le README, section « formulaire de contact ».
+{%- endcomment -%}
+{%- if site.forms.formspree_id and site.forms.formspree_id != "" -%}
+<form class="contact-form" action="https://formspree.io/f/{{ site.forms.formspree_id }}" method="POST">
+  <div class="form-field">
+    <label for="nom">Votre nom</label>
+    <input type="text" id="nom" name="nom" autocomplete="name" required>
+  </div>
+  <div class="form-field">
+    <label for="email">Votre e-mail</label>
+    <input type="email" id="email" name="email" autocomplete="email" required>
+  </div>
+  <div class="form-field">
+    <label for="sujet">Sujet</label>
+    <input type="text" id="sujet" name="sujet">
+  </div>
+  <div class="form-field">
+    <label for="message">Votre message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+  <button class="btn btn-accent" type="submit">Envoyer le message</button>
+  <p class="form-note">En envoyant ce message, vous acceptez d'être recontacté·e par e-mail. Vos coordonnées ne sont jamais revendues.</p>
+</form>
+
+<hr>
+
+<p>Vous préférez l'e-mail&nbsp;? Écrivez directement à
+  <a href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+{%- else -%}
+<div class="cta" style="text-align:left;">
+  <h2 style="margin-top:0;">Écrivez-moi par e-mail</h2>
+  <p>Le plus simple pour me joindre&nbsp;: un petit message à l'adresse ci-dessous. Je réponds avec plaisir&nbsp;!</p>
+  <a class="btn btn-accent" href="mailto:{{ site.email }}">{{ site.email }}</a>
+</div>
+{%- endif -%}
+
+{%- assign has_social = false -%}
+{%- if site.social.instagram != "" or site.social.facebook != "" or site.social.pinterest != "" or site.social.youtube != "" -%}{%- assign has_social = true -%}{%- endif -%}
+{%- if has_social -%}
+<p>Retrouvez aussi Savannah sur&nbsp;:</p>
+<ul>
+  {%- if site.social.instagram != "" -%}<li><a href="{{ site.social.instagram }}" rel="me noopener" target="_blank">Instagram</a></li>{%- endif -%}
+  {%- if site.social.facebook != "" -%}<li><a href="{{ site.social.facebook }}" rel="me noopener" target="_blank">Facebook</a></li>{%- endif -%}
+  {%- if site.social.pinterest != "" -%}<li><a href="{{ site.social.pinterest }}" rel="me noopener" target="_blank">Pinterest</a></li>{%- endif -%}
+  {%- if site.social.youtube != "" -%}<li><a href="{{ site.social.youtube }}" rel="me noopener" target="_blank">YouTube</a></li>{%- endif -%}
+</ul>
+{%- endif -%}
